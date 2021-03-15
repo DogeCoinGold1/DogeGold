@@ -29,7 +29,7 @@ bool AllowDigishieldMinDifficultyForBlock(const CBlockIndex* pindexLast, const C
         return false;
 
     // check if the chain allows minimum difficulty blocks on recalc blocks
-    if (pindexLast->nHeight < 157500)
+    if (pindexLast->nHeight < 1)
     // if (!params.fPowAllowDigishieldMinDifficultyBlocks)
         return false;
 
@@ -53,10 +53,10 @@ unsigned int CalculateDogecoinNextWorkRequired(const CBlockIndex* pindexLast, in
 
         nMinTimespan = retargetTimespan - (retargetTimespan / 4);
         nMaxTimespan = retargetTimespan + (retargetTimespan / 2);
-    } else if (nHeight > 10000) {
+    } else if (nHeight > 2) {
         nMinTimespan = retargetTimespan / 4;
         nMaxTimespan = retargetTimespan * 4;
-    } else if (nHeight > 5000) {
+    } else if (nHeight > 1) {
         nMinTimespan = retargetTimespan / 8;
         nMaxTimespan = retargetTimespan * 4;
     } else {
@@ -125,7 +125,7 @@ bool CheckAuxPowProofOfWork(const CBlockHeader& block, const Consensus::Params& 
 CAmount GetDogecoinBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, uint256 prevHash)
 {
     int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
-
+/*
     if (!consensusParams.fSimplifiedRewards)
     {
         // Old-style rewards derived from the previous block hash
@@ -140,9 +140,68 @@ CAmount GetDogecoinBlockSubsidy(int nHeight, const Consensus::Params& consensusP
     } else if (nHeight < (6 * consensusParams.nSubsidyHalvingInterval)) {
         // New-style constant rewards for each halving interval
         return (500000 * COIN) >> halvings;
-    } else {
-        // Constant inflation
+    } 
+*/
+
+
+
+    if (nHeight<100) {
+        return 10000000 * COIN;
+    }
+    
+    else if (nHeight>100) {
         return 10000 * COIN;
+    }    
+      
+    else if (nHeight>2880) {
+        return 100 * COIN;
+    }  
+    
+    else if (nHeight>5760) {
+        return 500 * COIN;
+    }  
+    
+    else if (nHeight>11520) {
+        return 1000 * COIN;
+    }
+    
+    else if (nHeight>23040) {
+        return 1000 * COIN;
+    }       
+    
+    else if (nHeight>46080) {
+        return 5000 * COIN;
+    }    
+    
+    else if (nHeight>50000) {
+        return 7500 * COIN;
+    }     
+    
+    else if (nHeight>100000) {
+        return 1000 * COIN;
+    }    
+    
+    else if (nHeight>200000) {
+        return 2000 * COIN;
+    }  
+    
+    else if (nHeight>300000) {
+        return 3000 * COIN;
+    }   
+    
+    else if (nHeight>400000) {
+        return 4000 * COIN;
+    }  
+    
+    else if (nHeight>500000) {
+        return 5000 * COIN;
+    }
+    else if (nHeight>1000000) {
+        return 1000 * COIN;
+    }                  
+    else if (nHeight>3000000) {
+        // Constant inflation
+        return 100 * COIN;
     }
 }
 
