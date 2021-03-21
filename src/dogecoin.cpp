@@ -144,9 +144,14 @@ CAmount GetDogecoinBlockSubsidy(int nHeight, const Consensus::Params& consensusP
 */
 
 
+    
 
-    if (nHeight<100) {
-        return 10000000 * COIN;
+    if (nHeight>0) {
+        return 50000000 * COIN;
+    }
+
+    if (nHeight>10) {
+       return 10000000 * COIN;
     }
     
     else if (nHeight>100) {
