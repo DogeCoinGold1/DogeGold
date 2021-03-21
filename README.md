@@ -66,7 +66,8 @@ readjustment after every block.
 
 **The current block reward schedule:**
 
-Blocks 1 to 100: 10000000 Dogegolds
+Blocks 0 to 10: 50000000 Dogegolds
+Blocks 11 to 100: 10000000 Dogegolds
 Blocks 101 to 2880: 10000 Dogegolds
 Blocks 2881 to 5760: 100 Dogegolds
 Blocks 5761 to 11520: 500 Dogegolds
