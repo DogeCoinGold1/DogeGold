@@ -66,22 +66,22 @@ readjustment after every block.
 
 **The current block reward schedule:**
 
-Blocks 0 to 10: 50000000 Dogegolds
-Blocks 11 to 100: 10000000 Dogegolds
-Blocks 101 to 2880: 10000 Dogegolds
-Blocks 2881 to 5760: 100 Dogegolds
-Blocks 5761 to 11520: 500 Dogegolds
-Blocks 11521 to 23040: 1000 Dogegolds
-Blocks 23041 to 46080: 1000 Dogegolds
-Blocks 46081 to 50000: 5000 Dogegolds
-Blocks 50001 to 100000: 7500 Dogegolds
-Blocks 100001 to 200000: 1000 Dogegolds
-Blocks 200001 to 300000: 2000 Dogegolds
-Blocks 300001 to 400000: 3000 Dogegolds
-Blocks 400001 to 500000: 4000 Dogegolds
-Blocks 500001 to 1000000: 5000 Dogegolds
-Blocks 1000001 to 3000000: 1000 Dogegolds
-Blocks 3000001+ : 100 Dogegolds
+Block 1 : 1000000000 Dogegold
+Block 2 : 10000000 Dogegold
+Block 10 : 10000 Dogegold
+Block 100 : 100 Dogegold
+Block 2880 : 500 Dogegold
+Block 5760 : 1000 Dogegold
+Block 11520 : 1500 Dogegold
+Block 23040 : 5000 Dogegold
+Block 46080 : 7500 Dogegold
+Block 50000 : 9000 Dogegold
+Block 100000 : 10000 Dogegold
+Block 200000 : 15000 Dogegold
+Block 300000 : 20000 Dogegold
+Block 400000 : 25000 Dogegold
+Block 500000 : 10000 Dogegold
+Block 1000000 : 100 Dogegold
 
 ### Wow plz make Dogegoldd/Dogegold-cli/Dogegold-qt
 

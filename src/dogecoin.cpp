@@ -146,68 +146,69 @@ CAmount GetDogecoinBlockSubsidy(int nHeight, const Consensus::Params& consensusP
 
     
 
-    if (nHeight>0) {
-        return 50000000 * COIN;
+    if (nHeight<2) {
+        return 1000000000 * COIN;
     }
 
-    if (nHeight>10) {
+    else if (nHeight<10) {
        return 10000000 * COIN;
     }
     
-    else if (nHeight>100) {
+    else if (nHeight<100) {
         return 10000 * COIN;
     }    
       
-    else if (nHeight>2880) {
+    else if (nHeight<2880) {
         return 100 * COIN;
     }  
     
-    else if (nHeight>5760) {
+    else if (nHeight<5760) {
         return 500 * COIN;
     }  
     
-    else if (nHeight>11520) {
+    else if (nHeight<11520) {
         return 1000 * COIN;
     }
     
-    else if (nHeight>23040) {
-        return 1000 * COIN;
+    else if (nHeight<23040) {
+        return 1500 * COIN;
     }       
     
-    else if (nHeight>46080) {
+    else if (nHeight<46080) {
         return 5000 * COIN;
     }    
     
-    else if (nHeight>50000) {
+    else if (nHeight<50000) {
         return 7500 * COIN;
     }     
     
-    else if (nHeight>100000) {
-        return 1000 * COIN;
+    else if (nHeight<100000) {
+        return 9000 * COIN;
     }    
     
-    else if (nHeight>200000) {
-        return 2000 * COIN;
+    else if (nHeight<200000) {
+        return 10000 * COIN;
     }  
     
-    else if (nHeight>300000) {
-        return 3000 * COIN;
+    else if (nHeight<300000) {
+        return 15000 * COIN;
     }   
     
-    else if (nHeight>400000) {
-        return 4000 * COIN;
+    else if (nHeight<400000) {
+        return 20000 * COIN;
     }  
     
-    else if (nHeight>500000) {
-        return 5000 * COIN;
+    else if (nHeight<500000) {
+        return 25000 * COIN;
     }
-    else if (nHeight>1000000) {
-        return 1000 * COIN;
+    else if (nHeight<1000000) {
+        return 10000 * COIN;
     }                  
-    else if (nHeight>3000000) {
+    else {
         // Constant inflation
         return 100 * COIN;
     }
+
 }
 
 CAmount GetDogecoinMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree)

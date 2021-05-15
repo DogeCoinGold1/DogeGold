@@ -84,7 +84,7 @@ public:
         consensus.BIP34Hash = uint256S("0x037cb1cdbeb305e55aaa262c9b7fc9b27b9edfb089e54aa1c565284ef1ad7d57");
         // consensus.BIP65Height = 1032483; // Not enabled in Doge yet
         consensus.BIP66Height = 0; // 80d1364201e5df97e696c03bdd24dc885e8617b9de51e453c10a4f629b1e797a - this is the last block that could be v2, 1900 blocks past the last v2 block
-        consensus.powLimit = uint256S("0x000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
+        consensus.powLimit = uint256S("0x00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
                                    //("0x00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff")// ~uint256(0) >> 20;
         consensus.nPowTargetTimespan = 30; // pre-digishield: 4 hours
         consensus.nPowTargetSpacing = 30; // 1 minute
