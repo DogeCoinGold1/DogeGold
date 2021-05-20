@@ -51,7 +51,7 @@ not straightforward.
 ## Very Much Frequently Asked Questions ❓
 
 ### How much dogegold can exist? – So many puppies! 🐕
-Around block 3,000,000 there will be approximately 4,960,109,400 coins.
+Around block 1,000,000 there will be approximately 9,000,000,000 coins.
 Each subsequent block will grant 100 coins to encourage miners to continue to
 secure the network and make up for lost wallets on hard drives/phones/lost
 encryption passwords/etc.
