@@ -1,4 +1,4 @@
-Building Dogecoin
+Building Dogegold
 ================
 
 See doc/build-*.md for instructions on building the various

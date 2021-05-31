@@ -1,36 +1,36 @@
 #!/bin/bash
 #
-#  dogecoind The dogecoin core server.
+#  dogegoldd The dogegold core server.
 #
 #
 # chkconfig: 345 80 20
-# description: dogecoind
-# processname: dogecoind
+# description: dogegoldd
+# processname: dogegoldd
 #
 
 # Source function library.
 . /etc/init.d/functions
 
-# you can override defaults in /etc/sysconfig/dogecoind, see below
-if [ -f /etc/sysconfig/dogecoind ]; then
-        . /etc/sysconfig/dogecoind
+# you can override defaults in /etc/sysconfig/dogegoldd, see below
+if [ -f /etc/sysconfig/dogegoldd ]; then
+        . /etc/sysconfig/dogegoldd
 fi
 
 RETVAL=0
 
-prog=dogecoind
-# you can override the lockfile via DOGECOIND_LOCKFILE in /etc/sysconfig/dogecoind
-lockfile=${DOGECOIND_LOCKFILE-/var/lock/subsys/dogecoind}
+prog=dogegoldd
+# you can override the lockfile via DOGEGOLDD_LOCKFILE in /etc/sysconfig/dogegoldd
+lockfile=${DOGEGOLDD_LOCKFILE-/var/lock/subsys/dogegoldd}
 
-# dogecoind defaults to /usr/bin/dogecoind, override with DOGECOIND_BIN
-dogecoind=${DOGECOIND_BIN-/usr/bin/dogecoind}
+# dogegoldd defaults to /usr/bin/dogegoldd, override with DOGEGOLDD_BIN
+dogegoldd=${DOGEGOLDD_BIN-/usr/bin/dogegoldd}
 
-# dogecoind opts default to -disablewallet, override with DOGECOIND_OPTS
-dogecoind_opts=${DOGECOIND_OPTS--disablewallet}
+# dogegoldd opts default to -disablewallet, override with DOGEGOLDD_OPTS
+dogegoldd_opts=${DOGEGOLDD_OPTS--disablewallet}
 
 start() {
     echo -n $"Starting $prog: "
-    daemon $DAEMONOPTS $dogecoind $dogecoind_opts
+    daemon $DAEMONOPTS $dogegoldd $dogegoldd_opts
     RETVAL=$?
     echo
     [ $RETVAL -eq 0 ] && touch $lockfile

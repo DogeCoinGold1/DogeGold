@@ -1,11 +1,11 @@
 Sample configuration files for:
 
-SystemD: dogecoind.service
-Upstart: dogecoind.conf
-OpenRC:  dogecoind.openrc
-         dogecoind.openrcconf
-CentOS:  dogecoind.init
-OS X:    org.dogecoin.dogecoind.plist
+SystemD: dogegoldd.service
+Upstart: dogegoldd.conf
+OpenRC:  dogegoldd.openrc
+         dogegoldd.openrcconf
+CentOS:  dogegoldd.init
+OS X:    org.dogegold.dogegoldd.plist
 
 have been made available to assist packagers in creating node packages here.
 
