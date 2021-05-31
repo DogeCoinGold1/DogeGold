@@ -201,7 +201,7 @@ void Shutdown()
     StopRPC();
     StopHTTPServer();
 #ifdef ENABLE_WALLET
-    // Dogecoin 1.14 TODO: ShutdownRPCMining();
+    // Dogegold 1.14 TODO: ShutdownRPCMining();
     if (pwalletMain)
         pwalletMain->Flush(false);
 #endif
@@ -1658,7 +1658,7 @@ bool AppInitMain(boost::thread_group& threadGroup, CScheduler& scheduler)
 
     // ********************************************************* Step 12: finished
 
-    // Dogecoin: Do we need to do any RPC mining init here?
+    // Dogegold: Do we need to do any RPC mining init here?
 
     SetRPCWarmupFinished();
     uiInterface.InitMessage(_("Done loading"));

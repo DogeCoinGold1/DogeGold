@@ -1,0 +1,33 @@
+# /etc/conf.d/dogegoldd: config file for /etc/init.d/dogegoldd
+
+# Config file location
+#DOGEGOLDD_CONFIGFILE="/etc/dogegold/dogegold.conf"
+
+# What directory to write pidfile to?  (created and owned by $DOGEGOLDD_USER)
+#DOGEGOLDD_PIDDIR="/var/run/dogegoldd"
+
+# What filename to give the pidfile
+#DOGEGOLDD_PIDFILE="${DOGEGOLDD_PIDDIR}/dogegoldd.pid"
+
+# Where to write dogegoldd data (be mindful that the blockchain is large)
+#DOGEGOLDD_DATADIR="/var/lib/dogegoldd"
+
+# User and group to own dogegoldd process
+#DOGEGOLDD_USER="dogegold"
+#DOGEGOLDD_GROUP="dogegold"
+
+# Path to dogegoldd executable
+#DOGEGOLDD_BIN="/usr/bin/dogegoldd"
+
+# Nice value to run dogegoldd under
+#DOGEGOLDD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+DOGEGOLDD_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for dogegoldd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+DOGEGOLDD_SIGTERM_TIMEOUT=60

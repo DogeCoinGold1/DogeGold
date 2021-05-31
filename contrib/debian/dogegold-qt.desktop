@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Dogegold Core
+Comment=Connect to the Dogegold P2P Network
+Comment[de]=Verbinde mit dem Dogegold peer-to-peer Netzwerk
+Comment[fr]=Dogegold, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Dogegold, eşten eşe kriptografik sanal para birimi
+Exec=dogegold-qt %u
+Terminal=false
+Type=Application
+Icon=dogegold128
+MimeType=x-scheme-handler/dogegold;
+Categories=Office;Finance;

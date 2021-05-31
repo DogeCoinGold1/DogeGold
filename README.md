@@ -83,7 +83,7 @@ Block 400000 : 25000 Dogegold
 Block 500000 : 10000 Dogegold
 Block 1000000 : 100 Dogegold
 
-### Wow plz make Dogegoldd/Dogegold-cli/Dogegold-qt
+### Wow plz make dogegoldd/dogegold-cli/dogegold-qt
 
   The following are developer notes on how to build Dogegold on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 

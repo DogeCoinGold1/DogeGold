@@ -1,0 +1,22 @@
+[Unit]
+Description=Dogegold's distributed currency daemon
+After=network.target
+
+[Service]
+User=dogegold
+Group=dogegold
+
+Type=forking
+PIDFile=/var/lib/dogegoldd/dogegoldd.pid
+ExecStart=/usr/bin/dogegoldd -daemon -pid=/var/lib/dogegoldd/dogegoldd.pid \
+-conf=/etc/dogegold/dogegold.conf -datadir=/var/lib/dogegoldd -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
